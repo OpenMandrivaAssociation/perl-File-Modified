@@ -3,7 +3,7 @@
 Summary:	File::Modified - checks intelligently if files have changed
 Name:		perl-%{real_name}
 Version:	0.07
-Release: %mkrel 2
+Release:	%mkrel 3
 License:	GPL or Artistic
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{real_name}
@@ -39,4 +39,3 @@ rm -rf %{buildroot}
 %doc Changes README example
 %{perl_vendorlib}/File/Modified.pm
 %{_mandir}/*/*
-
