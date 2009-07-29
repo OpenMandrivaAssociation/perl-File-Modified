@@ -1,16 +1,18 @@
-%define real_name File-Modified
+%define upstream_name    File-Modified
+%define upstream_version 0.07
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	File::Modified - checks intelligently if files have changed
-Name:		perl-%{real_name}
-Version:	0.07
-Release:	%mkrel 5
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{real_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/C/CO/CORION/%{real_name}-%{version}.tar.bz2
-BuildRequires:	perl-devel
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://search.cpan.org/CPAN/authors/id/C/CO/CORION/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 The Modified module is intended as a simple method for programs to detect
@@ -20,7 +22,7 @@ The MD5 method will fall back to use timestamps if the Digest::MD5 module
 cannot be loaded.
 
 %prep
-%setup -q -n %{real_name}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
