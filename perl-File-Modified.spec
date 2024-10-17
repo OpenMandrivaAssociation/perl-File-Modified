@@ -8,7 +8,7 @@ Release:	4
 Summary:	File::Modified - checks intelligently if files have changed
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://search.cpan.org/CPAN/authors/id/C/CO/CORION/%{upstream_name}-%{upstream_version}.tar.bz2
 
 BuildRequires:	perl-devel
